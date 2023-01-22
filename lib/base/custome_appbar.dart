@@ -23,13 +23,11 @@ class CustomerAppBar extends StatelessWidget implements PreferredSizeWidget {
         text: title,
         color: Colors.white,
       ),
-
       elevation: 0,
       leading: backButtonExist
           ? IconButton(
-              onPressed: () => onBackPressed != null
-                  ? onBackPressed!()
-                  : Get.back(),
+              onPressed: () =>
+                  onBackPressed != null ? onBackPressed!() : Get.back(),
               icon: const Icon(Icons.arrow_back))
           : const SizedBox(),
     );

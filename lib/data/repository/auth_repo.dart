@@ -48,7 +48,7 @@ class AuthRepo {
     sharedPreferences.remove(AppConstants.PHONE);
     apiClient.token = "";
     apiClient.updateHeader("");
-    
+
     return true;
   }
 }

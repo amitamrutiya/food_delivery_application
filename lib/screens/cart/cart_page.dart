@@ -398,7 +398,6 @@ class CartPage extends StatelessWidget {
                                                                   noteController,
                                                               hintText:
                                                                   "Like Extra Suger,More Spicee etc",
-                                                                  
                                                               maxLines: true,
                                                               icon: Icons.note,
                                                             )

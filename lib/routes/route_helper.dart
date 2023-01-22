@@ -37,8 +37,10 @@ class RouteHelper {
   static String getSignUpPage() => signUp;
   static String getAddressPage() => addAddress;
   static String getPickAddressPage() => pickAddressMap;
-  static String getPaymentPage(String id,int userID) => '$payment?id=$id&userID=$userID';
-  static String getOrderSuccessPage(String orderID,String status) => '$orderSuccess?id=$orderID&status=$status';
+  static String getPaymentPage(String id, int userID) =>
+      '$payment?id=$id&userID=$userID';
+  static String getOrderSuccessPage(String orderID, String status) =>
+      '$orderSuccess?id=$orderID&status=$status';
 
   static List<GetPage> routes = [
     GetPage(name: splashPage, page: () => const SplashScreen()),
@@ -105,8 +107,11 @@ class RouteHelper {
       ),
     ),
     GetPage(
-      name: orderSuccess,
-      page: () => OrderSuccessPage(orderID:Get.parameters['id']!,status:Get.parameters['status'].toString().contains("success")?1:0))
-
+        name: orderSuccess,
+        page: () => OrderSuccessPage(
+            orderID: Get.parameters['id']!,
+            status: Get.parameters['status'].toString().contains("success")
+                ? 1
+                : 0))
   ];
 }
