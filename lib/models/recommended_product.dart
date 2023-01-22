@@ -3,7 +3,8 @@ class RecommendedProduct {
   int? _typeId;
   int? _offset;
   List<RecommendedProductModel>? _products;
-List<RecommendedProductModel> get products => _products as List<RecommendedProductModel>;
+  List<RecommendedProductModel> get products =>
+      _products as List<RecommendedProductModel>;
   RecommendedProduct(
       {required totalSize,
       required typeId,

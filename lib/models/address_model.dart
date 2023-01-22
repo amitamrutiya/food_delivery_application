@@ -51,6 +51,7 @@ class AddressModel {
     data['contact_person_number'] = contactPersonNumber;
     data['latitude'] = latitude;
     data['longitude'] = longitude;
+
     return data;
   }
 }

@@ -30,59 +30,59 @@ class OrderModel {
 
   AddressModel? deliveryAddress;
 
-  OrderModel(
-      { required this.id,
-        required this.userId,
-         this.orderAmount,
-         this.paymentStatus,
-         this.orderNote,
-         this.createdAt,
-         this.updatedAt,
-         this.deliveryCharge,
-         this.scheduleAt,
-         this.otp,
-         this.orderStatus,
-         this.pending,
-         this.accepted,
-         this.confirmed,
-         this.processing,
-         this.handover,
-         this.pickedUp,
-         this.delivered,
-         this.canceled,
-         this.scheduled,
-         this.failed,
-         this.detailsCount,
-         this.deliveryAddress,
-      });
+  OrderModel({
+    required this.id,
+    required this.userId,
+    this.orderAmount,
+    this.paymentStatus,
+    this.orderNote,
+    this.createdAt,
+    this.updatedAt,
+    this.deliveryCharge,
+    this.scheduleAt,
+    this.otp,
+    this.orderStatus,
+    this.pending,
+    this.accepted,
+    this.confirmed,
+    this.processing,
+    this.handover,
+    this.pickedUp,
+    this.delivered,
+    this.canceled,
+    this.scheduled,
+    this.failed,
+    this.detailsCount,
+    this.deliveryAddress,
+  });
 
   OrderModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     userId = json['user_id'];
     orderAmount = json['order_amount'].toDouble();
-    paymentStatus = json['payment_status']??"pending";
-    totalTaxAmount =10.0;
+    paymentStatus = json['payment_status'] ?? "pending";
+    totalTaxAmount = 10.0;
     orderNote = json['order_note'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
-    orderStatus=json['order_status'];
+    orderStatus = json['order_status'];
     deliveryCharge = 10.0;
-    scheduleAt = json['schedule_at']??"";
+    scheduleAt = json['schedule_at'] ?? "";
     otp = json['otp'];
-    pending = json['pending']??"";
-    accepted = json['accepted']??"";
-    confirmed = json['confirmed']??"";
-    processing = json['processing']??"";
-    handover = json['handover']??"";
-    pickedUp = json['picked_up']??"";
-    delivered = json['delivered']??"";
-    canceled = json['canceled']??"";
+    pending = json['pending'] ?? "";
+    accepted = json['accepted'] ?? "";
+    confirmed = json['confirmed'] ?? "";
+    processing = json['processing'] ?? "";
+    handover = json['handover'] ?? "";
+    pickedUp = json['picked_up'] ?? "";
+    delivered = json['delivered'] ?? "";
+    canceled = json['canceled'] ?? "";
     scheduled = json['scheduled'];
-    failed = json['failed']??"";
+    failed = json['failed'] ?? "";
     detailsCount = json['details_count'];
 
     deliveryAddress = (json['delivery_address'] != null
-        ?  AddressModel.fromJson(json['delivery_address'])
+        ? AddressModel.fromJson(json['delivery_address'])
         : null)!;
   }
 

@@ -75,7 +75,7 @@ class CartHistory extends StatelessWidget {
                       color: Colors.white,
                     ),
                     GestureDetector(
-                      onTap: ()=>Get.toNamed(RouteHelper.getCartPage()),
+                      onTap: () => Get.toNamed(RouteHelper.getCartPage()),
                       child: const AppIcon(
                         icon: Icons.shopping_cart,
                         iconColor: AppColors.mainColor,

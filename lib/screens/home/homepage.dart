@@ -43,8 +43,7 @@ class _HomePageState extends State<HomePage> {
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_outlined), label: 'home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.history), label: 'order'),
+            BottomNavigationBarItem(icon: Icon(Icons.history), label: 'order'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart_checkout), label: 'cart'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
